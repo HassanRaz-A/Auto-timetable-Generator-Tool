@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.db
+*.db-journal
+data/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

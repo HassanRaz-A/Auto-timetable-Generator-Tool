@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./backend
+    container_name: ttms-backend
+    environment:
+      - DATABASE_URL=sqlite:///./data/ttms.db
+    volumes:
+      - ./backend/data:/app/data
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    container_name: ttms-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
